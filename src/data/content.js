@@ -16,11 +16,7 @@ export const data = {
     role: "Software Engineer, R&D",
     company: "Cadence Design Systems",
     items: [
-      "Working on FPGA Prototyping Systems at Cadence — bridging RTL design and hardware validation",
-      "Designing wildcard instance matching for large design hierarchies using Tries",
-      "Engineering resource pre-estimation modules for independent design components",
-      "Deep in Unix daily — Perforce, gmake, LSF, and debuggers for build automation",
-      "Grinding competitive programming — targeting Candidate Master on Codeforces",
+      "Working on FPGA-based Emulator Platform at Cadence Design Systems",
     ],
   },
 
@@ -32,12 +28,9 @@ export const data = {
       location: "India",
       logo: import.meta.env.BASE_URL + "cadence-logo.svg",
       bullets: [
-        "Working on FPGA Prototyping Systems — enabling RTL-to-FPGA hardware validation workflows for chip designers",
-        "Designed wildcard instance matching feature for Instances across large design hierarchies using Tries data structure",
-        "Engineered a module for pre-estimation of resources in independent design components, improving resource utilization",
-        "Working in Unix-based environment using Perforce, gmake, LSF, and debuggers for build automation and tuning",
+        "Working on FPGA-based Emulator Platform",
       ],
-      tags: ["C++", "FPGA", "Tries", "EDA", "Unix", "Perforce"],
+      tags: ["C++", "FPGA", "EDA"],
     },
     {
       company: "Smart Antenna Lab, Swansea University",
