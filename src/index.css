@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme CSS Variables ─── */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --surface: #12121a;
+  --surface-2: #1a1a26;
+  --border: #1e1e2e;
+  --border-bright: #2e2e4a;
+  --text: #e2e0f0;
+  --text-secondary: #a0a0c0;
+  --accent: #7c6aff;
+  --accent-2: #4fffb0;
+  --muted: #4a4a6a;
+  --dot-color: rgba(124, 106, 255, 0.07);
+  --glow: rgba(124, 106, 255, 0.15);
+}
+
+[data-theme="light"] {
+  --bg: #f5f5ff;
+  --surface: #ebebf8;
+  --surface-2: #ddddf0;
+  --border: #d0d0e8;
+  --border-bright: #b0b0d8;
+  --text: #0a0a1a;
+  --text-secondary: #40406a;
+  --accent: #5040e0;
+  --accent-2: #00a060;
+  --muted: #8080a8;
+  --dot-color: rgba(80, 64, 224, 0.06);
+  --glow: rgba(80, 64, 224, 0.12);
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, var(--dot-color) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  color: var(--text);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* ─── Section Container ─── */
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ─── Section Label ─── */
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ─── Divider ─── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 4rem 0;
+}
+
+/* ─── Corner Bracket Card ─── */
+.corner-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+.corner-card::before,
+.corner-card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: border-color 0.25s, opacity 0.25s;
+  opacity: 0;
+}
+.corner-card::before {
+  top: -1px; left: -1px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  border-radius: 2px 0 0 0;
+}
+.corner-card::after {
+  bottom: -1px; right: -1px;
+  border-bottom: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  border-radius: 0 0 2px 0;
+}
+.corner-card:hover::before,
+.corner-card:hover::after { opacity: 1; }
+.corner-card:hover {
+  border-color: var(--border-bright);
+  box-shadow: 0 0 24px var(--glow);
+  transform: translateY(-2px);
+}
+
+/* ─── Terminal Window ─── */
+.terminal-window {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-body {
+  padding: 1.25rem 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.85;
+}
+
+/* ─── Tech Tag ─── */
+.tech-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  padding: 3px 10px;
+  border-radius: 3px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.tech-tag:hover { border-color: var(--accent); background: var(--glow); }
+
+/* ─── Retro Link ─── */
+.retro-link { position: relative; text-decoration: none; color: var(--accent); }
+.retro-link::after {
+  content: ''; position: absolute; left: 0; bottom: -1px;
+  width: 0; height: 1px; background: var(--accent); transition: width 0.25s ease;
+}
+.retro-link:hover::after { width: 100%; }
+
+/* ─── Glow Text ─── */
+.glow-text { color: var(--accent); text-shadow: 0 0 20px var(--glow); }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ─── Selection ─── */
+::selection { background: var(--accent); color: #fff; }
+
+/* ─── Cursor Blink ─── */
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.cursor-blink {
+  display: inline-block;
+  width: 3px; height: 0.85em;
+  background: var(--accent);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+  border-radius: 1px;
+}
+
+/* ─── Hero Layout ─── */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+.hero-text { flex: 1 1 300px; min-width: 0; }
+.hero-photo-wrap { flex-shrink: 0; }
+
+/* ─── Projects Grid ─── */
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ─── Hobby Grid ─── */
+.hobby-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ─── Stats Box ─── */
+.stats-box {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+.stats-divider { width: 1px; background: var(--border); align-self: stretch; }
+
+/* ─── Win Timeline ─── */
+.win-item { display: flex; gap: 1.5rem; }
+.win-year { flex-shrink: 0; width: 2.8rem; text-align: right; padding-top: 0.2rem; }
+.win-stem {
+  position: absolute;
+  left: 3.25rem;
+  top: 1.5rem; bottom: 0;
+  width: 1px;
+  background-color: var(--border);
+  transform-origin: top;
+}
+
+/* ─── Mobile Menu ─── */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:active { background: var(--surface-2); color: var(--text); }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════════ */
+
+/* ── Large Tablet / Small Laptop  (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .section { max-width: 100%; }
+  .hero-layout { gap: 2rem; }
+}
+
+/* ── Tablet Portrait / iPad  (≤ 768px) ── */
+@media (max-width: 768px) {
+  .section { padding: 0 1.25rem 3rem; }
+  .divider { margin: 3rem 0; }
+
+  /* Hero stacks: photo top-center, text below-center */
+  .hero-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-text { text-align: center; }
+
+  /* Center flex children in hero */
+  .hero-social { justify-content: center !important; }
+  .hero-badges { justify-content: center !important; }
+  .hero-prompt { justify-content: center !important; }
+
+  /* Stats: full width, equal columns */
+  .stats-box { width: 100%; }
+  .stats-box > div { flex: 1; }
+
+  /* 2-col grids → 1-col */
+  .projects-grid { grid-template-columns: 1fr; }
+  .hobby-grid    { grid-template-columns: 1fr; }
+
+  /* Terminal: full width */
+  .terminal-window { max-width: 100% !important; }
+
+  /* Win timeline: tighten gap */
+  .win-item { gap: 0.85rem; }
+  .win-stem { left: 2.65rem !important; }
+}
+
+/* ── Phone (≤ 640px) ── */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .section { padding: 0 1rem 2.5rem; }
+  .divider { margin: 2.5rem 0; }
+
+  /* Tighter card padding */
+  .card-pad-lg { padding: 1.25rem !important; }
+  .card-pad-md { padding: 1rem !important; }
+
+  /* Terminal font */
+  .terminal-body { padding: 1rem !important; font-size: 0.72rem !important; }
+  .terminal-titlebar { padding: 8px 12px !important; }
+
+  /* Win year hidden → dot flush left */
+  .win-year { display: none; }
+  .win-item { gap: 0.75rem; }
+  .win-stem { left: 0.45rem !important; }
+}
+
+/* ── Small Phone (≤ 480px) ── */
+@media (max-width: 480px) {
+  .section { padding: 0 0.875rem 2rem; }
+  .hero-section { padding: 3rem 0.875rem 2.5rem !important; }
+
+  /* Badges wrap tighter */
+  .hero-badges { gap: 0.4rem !important; }
+  .tech-tag { padding: 3px 8px; font-size: 0.58rem; }
+
+  /* Stats box compact */
+  .stats-box .stat-pad { padding: 0.75rem 0.75rem !important; }
+
+  /* Nav hamburger area */
+  .nav-inner { padding: 0 1rem !important; }
+}
+
+/* ── Extra Small (≤ 360px — Galaxy S8, small Androids) ── */
+@media (max-width: 360px) {
+  .section { padding: 0 0.75rem 1.75rem; }
+  .hero-section { padding: 2.5rem 0.75rem 2rem !important; }
+}
+
+/* ─── Touch Devices: disable hover transforms ─── */
+@media (hover: none) {
+  .corner-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border);
+  }
+  .corner-card:hover::before,
+  .corner-card:hover::after { opacity: 0; }
+}
