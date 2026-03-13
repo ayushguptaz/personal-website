@@ -1,6 +1,6 @@
 export const data = {
   name: "Ayush Gupta",
-  photo: "/photo.jpg",   // drop your photo into public/ as photo.jpg (or .png — update extension here)
+  photo: import.meta.env.BASE_URL + "photo.jpg",
   social: {
     github: "https://github.com/ayushguptaz",
     linkedin: "https://linkedin.com/in/ayush-gupta-iitd",
@@ -30,7 +30,7 @@ export const data = {
       role: "Software Engineer, R&D Team",
       period: "June 2025 — Present",
       location: "India",
-      logo: "/cadence-logo.svg",
+      logo: import.meta.env.BASE_URL + "cadence-logo.svg",
       bullets: [
         "Working on FPGA Prototyping Systems — enabling RTL-to-FPGA hardware validation workflows for chip designers",
         "Designed wildcard instance matching feature for Instances across large design hierarchies using Tries data structure",
@@ -165,7 +165,7 @@ export const data = {
       degree: "B.Tech in Electrical Engineering",
       year: "2021 — 2025",
       grade: "CGPA: 7.73 / 10",
-      logo: "/iitd-logo.svg",
+      logo: import.meta.env.BASE_URL + "iitd-logo.svg",
       note: "Departmental Convenor at CAIC. Core coursework in DSA, OS, Computer Architecture, Signal Processing, Control Engineering, and Machine Learning.",
     },
     {
