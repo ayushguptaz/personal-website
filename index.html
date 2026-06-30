@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Gupta</title>
+  <link rel="icon" href="favicon.svg">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 0 1.25rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .header-text p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* Links row */
+    .links {
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+    }
+
+    /* Section styles */
+    section { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* Experience & Education items */
+    .item {
+      margin-bottom: 1.25rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .item-meta {
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .item-subtitle {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item ul {
+      margin-top: 0.3rem;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .item ul li { margin-bottom: 0.2rem; }
+
+    .tags {
+      margin-top: 0.35rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 1rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 0.15rem;
+    }
+
+    .project .tags { margin-top: 0.25rem; }
+
+    /* Skills */
+    .skill-group {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .skill-group strong {
+      font-weight: 600;
+    }
+
+    /* Wins */
+    .win {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .win-year {
+      font-weight: 600;
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    /* Beyond */
+    .beyond-intro {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 0.75rem;
+    }
+
+    .hobby {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .hobby strong { font-weight: 600; }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e5e5;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 2rem 0 3rem; }
+      .header { gap: 1rem; }
+      .photo { width: 64px; height: 64px; }
+      .header-text h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <img src="photo.jpg" alt="Ayush Gupta" class="photo">
+      <div class="header-text">
+        <h1>Ayush Gupta</h1>
+        <p>Software Engineer, R&D at Cadence Design Systems</p>
+        <p>B.Tech Electrical Engineering, IIT Delhi (2025)</p>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="mailto:ayushguptaiitd00@gmail.com">ayushguptaiitd00@gmail.com</a>
+      <a href="mailto:ayushgupta8009695@gmail.com">ayushgupta8009695@gmail.com</a>
+      <a href="https://github.com/ayushguptaz" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/ayush-gupta-iitd" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/@ayushguptazz" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/ayu.shguptaz/" target="_blank">Instagram</a>
+    </div>
+
+    <!-- Experience -->
+    <section>
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Cadence Design Systems</span>
+          <span class="item-meta">June 2025 &mdash; Present</span>
+        </div>
+        <div class="item-subtitle">Software Engineer, R&D Team &middot; India</div>
+        <ul>
+          <li>Working on FPGA-based Emulator Platform</li>
+        </ul>
+        <div class="tags">C++ &middot; FPGA &middot; EDA</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Smart Antenna Lab, Swansea University</span>
+          <span class="item-meta">May &mdash; July 2024</span>
+        </div>
+        <div class="item-subtitle">Research Intern &middot; Swansea, United Kingdom</div>
+        <ul>
+          <li>Developed a software framework for drone detection on Raspberry Pi OS using PyQt and Tkinter</li>
+          <li>Implemented SPI-based drivers for beamforming chips and Python's socket library to manage multiple hardware</li>
+          <li>GUI supports real-time updates & synchronization with hardware via periodic data fetching and display</li>
+          <li>Enhanced reliability with structured exception handling and edge-case simulation frameworks</li>
+          <li>Results on Multibeam & Multinull formation and Antenna design presented at IEEE APS 2024</li>
+        </ul>
+        <div class="tags">Python &middot; PyQt &middot; Raspberry Pi &middot; SPI &middot; Embedded &middot; IEEE APS 2024</div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Indian Institute of Technology, Delhi</span>
+          <span class="item-meta">2021 &mdash; 2025</span>
+        </div>
+        <div class="item-subtitle">B.Tech in Electrical Engineering &middot; CGPA: 7.73 / 10</div>
+        <p style="font-size: 0.9rem; color: #333; margin-top: 0.2rem;">Departmental Convenor at CAIC. Core coursework in DSA, OS, Computer Architecture, Signal Processing, Control Engineering, and Machine Learning.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Vidyamandir Sr. Sec. School, Kota</span>
+          <span class="item-meta">2019 &mdash; 2021</span>
+        </div>
+        <div class="item-subtitle">Senior Secondary (C.B.S.E.) &middot; 90.2%</div>
+        <p style="font-size: 0.9rem; color: #333; margin-top: 0.2rem;">Science stream with Mathematics. Focused preparation for JEE alongside school curriculum.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <span class="project-title">Natural Language Q&A and Document Search</span>
+        <span class="item-meta"> &middot; Nov&ndash;Dec 2024 &middot; Prof. Rahul Narain, IIT Delhi</span>
+        <p>Search engine using KMP and Boyer-Moore algorithms for fast string matching across large text corpora. Ranked top-K paragraphs with TF-IDF and Porter Stemming, integrated OpenAI API for context-aware Q&A responses.</p>
+        <div class="tags">Python &middot; NLP &middot; KMP &middot; Boyer-Moore &middot; TF-IDF &middot; OpenAI API &middot; Trie</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title">Object Count Prediction using Neural Networks</span>
+        <span class="item-meta"> &middot; Jan&ndash;Feb 2025 &middot; Prof. Sandeep Kumar, IIT Delhi</span>
+        <p>Feedforward neural network built from scratch in Python to predict object counts (1&ndash;5) from CLEVR images. Implemented mini-batch SGD and backpropagation, achieving 88% test accuracy over 10,000 training samples.</p>
+        <div class="tags">Python &middot; Neural Networks &middot; SGD &middot; Backpropagation &middot; NumPy</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/Predictive-Analytics-of-Stock-Prices-with-News-Sentiment" target="_blank">Predictive Analytics of Stock Prices with News Sentiment</a></span>
+        <span class="item-meta"> &middot; Jul&ndash;Oct 2023 &middot; Prof. Brejesh Lall, IIT Delhi</span>
+        <p>SVR model with RBF kernel for stock price prediction, incorporating sentiment analysis from news articles. Used yfinance for historical data, TextBlob for polarity scoring, generated 30-day future predictions evaluated with MAE.</p>
+        <div class="tags">Python &middot; SVR &middot; scikit-learn &middot; NLP &middot; yfinance &middot; TextBlob</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/Nearby-Restaurants-Search-Implementation" target="_blank">Nearby Restaurants Search (Google Maps Feature)</a></span>
+        <span class="item-meta"> &middot; Jul&ndash;Oct 2023 &middot; Prof. Naveen Garg, IIT Delhi</span>
+        <p>Search algorithm to find all points within a given Chebyshev distance using a 2D Range Tree. Achieves O(n log n) build time and O(m + (log n)&sup2;) query time for spatial restaurant lookup.</p>
+        <div class="tags">Python &middot; Data Structures &middot; 2D Range Tree &middot; Spatial Search</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/SimpleRISC-CPU-Architecture-Design-Using-Logisim-Evolution" target="_blank">SimpleRISC CPU Architecture</a></span>
+        <span class="item-meta"> &middot; Mar&ndash;Apr 2023 &middot; Prof. Saurav Gandhi, IIT Delhi</span>
+        <p>Designed a 5-unit RISC CPU in Logisim Evolution with a custom ISA &mdash; 32-bit instructions, 16 general-purpose registers, full arithmetic, comparison (with flags), and memory operations.</p>
+        <div class="tags">VHDL &middot; Logisim &middot; Computer Architecture &middot; ISA Design</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/AI-Powered-Rollerball-Game-Bot" target="_blank">AI Rollerball Game Bot</a></span>
+        <span class="item-meta"> &middot; 2024</span>
+        <p>Intelligent game-playing agent for the Rollerball board game implemented in C++. Uses adversarial search with alpha-beta pruning and custom heuristics to play competitively.</p>
+        <div class="tags">C++ &middot; AI &middot; Alpha-Beta Pruning &middot; Game Theory</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/Compiler-and-Evaluator-for-E-Language-with-Optimised-Arithmetic" target="_blank">Compiler & Evaluator for E-Language</a></span>
+        <span class="item-meta"> &middot; 2024</span>
+        <p>A compiler and evaluator for a custom expression language with optimised arithmetic. Implements lexer, parser, AST, and evaluator with operator precedence and constant folding.</p>
+        <div class="tags">C++ &middot; Compilers &middot; AST &middot; Lexer &middot; Parser</div>
+      </div>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/Finance-Tracker-" target="_blank">Full-Stack Finance Tracker</a></span>
+        <span class="item-meta"> &middot; 2025</span>
+        <p>MERN stack personal finance application with transaction tracking, category-based analytics, and monthly budget visualizations. Features JWT auth and a responsive dashboard.</p>
+        <div class="tags">React &middot; Node.js &middot; MongoDB &middot; Express &middot; JWT &middot; MERN</div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-group"><strong>Languages:</strong> C++, Python, C, SQL, VHDL, HTML, CSS, JavaScript</div>
+      <div class="skill-group"><strong>ML / Data:</strong> PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, OpenAI API, TextBlob</div>
+      <div class="skill-group"><strong>Systems & Tools:</strong> Linux, Git, Perforce, gmake, LSF, GDB, Matlab, Logisim Evolution</div>
+      <div class="skill-group"><strong>Embedded:</strong> Raspberry Pi 4, Arduino, ESP-32, SPI, PyQt, Tkinter</div>
+      <div class="skill-group"><strong>Web:</strong> React, Node.js, Express, MongoDB, REST APIs, JWT</div>
+    </section>
+
+    <!-- Achievements -->
+    <section>
+      <h2>Achievements</h2>
+
+      <div class="win">
+        <span class="win-year">2025</span> &mdash; <strong>Software Engineer @ Cadence Design Systems.</strong> Joined the R&D team at Cadence, one of the world's leading EDA companies. Working on tools that power semiconductor chip design at global scale.
+      </div>
+
+      <div class="win">
+        <span class="win-year">2024</span> &mdash; <strong>IEEE APS 2024 &mdash; Research Presentation.</strong> Experimental results on Multibeam & Multinull antenna formation, developed during internship at Smart Antenna Lab, Swansea University, were presented at IEEE APS 2024.
+      </div>
+
+      <div class="win">
+        <span class="win-year">2022</span> &mdash; <strong>Top 5% Merit Branch Change &mdash; IIT Delhi.</strong> Changed discipline to Electrical Engineering on merit basis &mdash; ranked in top 5% out of 1,200 students across all departments.
+      </div>
+
+      <div class="win">
+        <span class="win-year">2022</span> &mdash; <strong>1st Rank &mdash; Decipher-D-Cipher, Tryst IIT Delhi.</strong> Won the cryptography & ciphers event at Tryst, IIT Delhi's annual technical festival, organized by the Mathematics Society.
+      </div>
+
+      <div class="win">
+        <span class="win-year">2017</span> &mdash; <strong>State Child Scientist &mdash; NCSC 2017.</strong> Selected to participate in the 25th State Level National Science Congress.
+      </div>
+    </section>
+
+    <!-- Beyond Work -->
+    <section>
+      <h2>Beyond Work</h2>
+      <p class="beyond-intro">Outside of work and code, I stay active, love exploring new places, and always enjoy picking up something new. Life's too short to stop trying things.</p>
+      <div class="hobby"><strong>Creating Content</strong> &mdash; These days I'm creating content around what I learn or read &mdash; sharing on <a href="https://www.youtube.com/@ayushguptazz" target="_blank">YouTube</a> and <a href="https://www.instagram.com/ayu.shguptaz/" target="_blank">Instagram</a>.</div>
+      <div class="hobby"><strong>Tennis</strong> &mdash; On the court whenever I can be. There's something about the mix of athleticism and precision that keeps pulling me back.</div>
+      <div class="hobby"><strong>Travel</strong> &mdash; Love exploring new cities, cultures, and cuisines. Every trip teaches me something I couldn't have learnt otherwise.</div>
+      <div class="hobby"><strong>Competitive Programming</strong> &mdash; CF Expert (1600+). There's something addictive about reducing a hard problem to a clean algorithm under time pressure.</div>
+    </section>
+
+    <footer>
+      Ayush Gupta &middot; <a href="mailto:ayushguptaiitd00@gmail.com">ayushguptaiitd00@gmail.com</a> &middot; <a href="mailto:ayushgupta8009695@gmail.com">ayushgupta8009695@gmail.com</a>
+    </footer>
+
+  </div>
+</body>
+</html>
