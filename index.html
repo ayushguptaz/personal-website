@@ -197,6 +197,24 @@
       font-size: 0.8rem;
     }
 
+    /* Details toggle */
+    .details-toggle {
+      background: none;
+      border: none;
+      color: var(--link);
+      font-size: 0.8rem;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 0.3rem;
+    }
+    .details-toggle:hover { text-decoration: underline; }
+
+    .details-content {
+      display: none;
+      margin-top: 0.3rem;
+    }
+    .details-content.show { display: block; }
+
     /* Beyond */
     .beyond-intro {
       font-size: 0.9rem;
@@ -244,7 +262,6 @@
 
     <!-- Links -->
     <div class="links">
-      <a href="mailto:ayushguptaiitd00@gmail.com">ayushguptaiitd00@gmail.com</a>
       <a href="mailto:ayushgupta8009695@gmail.com">ayushgupta8009695@gmail.com</a>
       <a href="https://github.com/ayushguptaz" target="_blank">GitHub</a>
       <a href="https://linkedin.com/in/ayush-gupta-iitd" target="_blank">LinkedIn</a>
@@ -263,9 +280,12 @@
         </div>
         <div class="item-subtitle">Software Engineer, R&D Team &middot; India</div>
         <ul>
-          <li>Working on FPGA-based Emulator Platform</li>
+          <li>Implemented new features in Protium emulator platform including auto-binning and wildcard instance assignment</li>
+          <li>Improved TDM Ratio by optimizing cost functions in the compilation flow</li>
+          <li>Used multithreading (TBB) to improve compile time across several functions</li>
+          <li>Built AI agents for automatic debugging of testcases</li>
         </ul>
-        <div class="tags">C++ &middot; FPGA &middot; EDA</div>
+        <div class="tags">C++ &middot; TBB &middot; FPGA &middot; EDA &middot; Protium &middot; AI Agents</div>
       </div>
 
       <div class="item">
@@ -274,13 +294,16 @@
           <span class="item-meta">May &mdash; July 2024</span>
         </div>
         <div class="item-subtitle">Research Intern &middot; Swansea, United Kingdom</div>
-        <ul>
-          <li>Developed a software framework for drone detection on Raspberry Pi OS using PyQt and Tkinter</li>
-          <li>Implemented SPI-based drivers for beamforming chips and Python's socket library to manage multiple hardware</li>
-          <li>GUI supports real-time updates & synchronization with hardware via periodic data fetching and display</li>
-          <li>Enhanced reliability with structured exception handling and edge-case simulation frameworks</li>
-          <li>Results on Multibeam & Multinull formation and Antenna design presented at IEEE APS 2024</li>
-        </ul>
+        <button class="details-toggle" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === 'Show details' ? 'Hide details' : 'Show details';">Show details</button>
+        <div class="details-content">
+          <ul>
+            <li>Developed a software framework for drone detection on Raspberry Pi OS using PyQt and Tkinter</li>
+            <li>Implemented SPI-based drivers for beamforming chips and Python's socket library to manage multiple hardware</li>
+            <li>GUI supports real-time updates & synchronization with hardware via periodic data fetching and display</li>
+            <li>Enhanced reliability with structured exception handling and edge-case simulation frameworks</li>
+            <li>Results on Multibeam & Multinull formation and Antenna design presented at IEEE APS 2024</li>
+          </ul>
+        </div>
         <div class="tags">Python &middot; PyQt &middot; Raspberry Pi &middot; SPI &middot; Embedded &middot; IEEE APS 2024</div>
       </div>
     </section>
@@ -295,7 +318,10 @@
           <span class="item-meta">2021 &mdash; 2025</span>
         </div>
         <div class="item-subtitle">B.Tech in Electrical Engineering &middot; CGPA: 7.73 / 10</div>
-        <p style="font-size: 0.9rem; color: var(--item-text); margin-top: 0.2rem;">Departmental Convenor at CAIC. Core coursework in DSA, OS, Computer Architecture, Signal Processing, Control Engineering, and Machine Learning.</p>
+        <button class="details-toggle" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === 'Show details' ? 'Hide details' : 'Show details';">Show details</button>
+        <div class="details-content">
+          <p style="font-size: 0.9rem; color: var(--item-text); margin-top: 0.2rem;">Departmental Convenor at CAIC. Core coursework in DSA, OS, Computer Architecture, Signal Processing, Control Engineering, and Machine Learning.</p>
+        </div>
       </div>
 
       <div class="item">
@@ -304,13 +330,19 @@
           <span class="item-meta">2019 &mdash; 2021</span>
         </div>
         <div class="item-subtitle">Senior Secondary (C.B.S.E.) &middot; 90.2%</div>
-        <p style="font-size: 0.9rem; color: var(--item-text); margin-top: 0.2rem;">Science stream with Mathematics. Focused preparation for JEE alongside school curriculum.</p>
       </div>
     </section>
 
     <!-- Projects -->
     <section>
       <h2>Projects</h2>
+
+      <div class="project">
+        <span class="project-title"><a href="https://github.com/ayushguptaz/ariane-450mhz-physical-design" target="_blank">Ariane133 Physical Design &mdash; Open-Source RTL-to-GDSII</a></span>
+        <span class="item-meta"> &middot; Jul 2025</span>
+        <p>Implemented the Ariane133 RISC-V core (194K cells, 132 SRAM macros) through a full RTL-to-routed ASIC flow on Nangate45 targeting 450 MHz. Ran 6 systematic experiments isolating SDC constraints, synthesis aggressiveness, and clock targets &mdash; achieved 270 MHz (WNS = &minus;1.52 ns). Identified the architectural bottleneck: a 69-gate combinational path through the issue scoreboard spanning 5 modules. Deployed on AWS EC2 using Docker-based reproducible flows.</p>
+        <div class="tags">OpenROAD &middot; Yosys &middot; Nangate45 &middot; Physical Design &middot; CTS &middot; STA &middot; RTL-to-GDSII &middot; Docker &middot; AWS EC2</div>
+      </div>
 
       <div class="project">
         <span class="project-title">Natural Language Q&A and Document Search</span>
@@ -415,7 +447,7 @@
     </section>
 
     <footer>
-      Ayush Gupta &middot; <a href="mailto:ayushguptaiitd00@gmail.com">ayushguptaiitd00@gmail.com</a> &middot; <a href="mailto:ayushgupta8009695@gmail.com">ayushgupta8009695@gmail.com</a>
+      Ayush Gupta &middot; <a href="mailto:ayushgupta8009695@gmail.com">ayushgupta8009695@gmail.com</a>
     </footer>
 
   </div>
